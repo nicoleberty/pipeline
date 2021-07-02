@@ -3,13 +3,13 @@ name: Python Pipeline
 on: push
 
 jobs:
-  test
+  test:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
      - run: python hello.py
   
-  build
+  build:
     needs: test
     runs-on: ubuntu-latest
     steps:
